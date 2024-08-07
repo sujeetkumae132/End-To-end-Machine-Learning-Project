@@ -2,12 +2,13 @@
 End To end Machine Learning Project with ML Flow
 
 step1. 
+
     template.py
         it will create all the folder structure which we required for 
         end to end project.
         following folder we are creating:
             a. components
-            b. utils
+            b. utils : here we'll create a file, which we use frequently as a function or etc.
             c. config
             d. pipeline
             e. entity
@@ -23,11 +24,13 @@ step1.
 
 
 step 2. 
+
     requirements.txt
     added all the required library name
         Note:- add "-e ." in the file to look for the setuptool.py file
 
 step 3.
+
     setup.py
         import setuptools
         and basic setup
@@ -48,3 +51,9 @@ step 3.
         package_dir={"":"<src file folder name>"},
         packages=setuptools.find_packages(where="<src file folder name>")
             )
+
+step 4. 
+
+    update the basic logging  into "__init_file.py" inside the "src/mlproject "
+    ex: we'll read the yaml file frequently
+
