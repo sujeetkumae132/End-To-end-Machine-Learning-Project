@@ -1,5 +1,5 @@
 import os
-from pathlib import path
+from pathlib import Path
 from mlproject import logger
 import yaml
 import typing
