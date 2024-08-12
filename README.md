@@ -59,19 +59,34 @@ step 4.
 
 
 step 5:
-    note: we read allthe "yaml" file into the __init__ file inside the constant folder
+    note: we read all the "yaml" file into the __init__ file inside the constant folder
+
+    steps:
+
+    1. data ingestion
+    2. data validation
+
     workflow: for each step we follow te below workflow
-        1. update config.yaml
+
+        1. update config.yaml # here we provide all the path related configuration
+
         2. update schema.yaml : while doing the data validation into the config.yaml, we'll require the validate the schema. hence, we're creating the schemas.yaml file.it is nothing but the describe the columns name and their dat type.
+
         3. update params.yaml
+
         4. update the entity # we create data class or static class as       required based on yaml file parameters
+
         5. update the configuration manager in src config
             #above folder we create a class which call the entity and __init__ file both
+
         6. update the components
             # above folder we'll creating  class which require for the 
                 final purpose of the pipelines
+
         7. update the pipeline # in this file we call the function created in above files
+
         8. update the main.py # to run the pipeline file we call the class into main.py file
+
         9. update the app.py
 
 
