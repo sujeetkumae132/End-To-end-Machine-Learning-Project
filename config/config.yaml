@@ -16,3 +16,8 @@ data_validation:
   STATUS_FILE:  artifacts/data_validation/status.txt
 
   # for data vlaidation we'll require schema.yaml 
+
+
+data_transformation:
+  root_dir: artifacts/data_
+  data_path:  artifacts/data_ingestion/winequality-red.csv

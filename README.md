@@ -65,7 +65,8 @@ step 5:
 
     1. data ingestion
     2. data validation
-
+    3. data transformation
+    
     workflow: for each step we follow te below workflow
 
         1. update config.yaml # here we provide all the path related configuration
