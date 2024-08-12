@@ -5,8 +5,8 @@ from mlproject.entity.config_entity import DataIngestionConfig,DataValidationCon
 class ConfigurationManager:
     def __init__(self,
                 config_filepath=config_file_path,
-                params_filepath=config_file_path,
-                schema_filepath=config_file_path):
+                params_filepath=params_file_path,
+                schema_filepath=schema_file_path):
         self.config=read_yaml_file(config_filepath)
         self.params=read_yaml_file(params_filepath)
         self.schema=read_yaml_file(schema_filepath)
