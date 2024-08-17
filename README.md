@@ -67,6 +67,7 @@ step 5:
     2. data validation
     3. data transformation
     4. Model Training
+    5. model evaluation
 
     workflow: for each step we follow te below workflow
 
