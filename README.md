@@ -92,4 +92,149 @@ step 5:
 
         9. update the app.py
 
+            note: after create all the pipeline i,1 data ingestion, data validation,data transformation,model trainer, model evaluation, we'll update the code in app.py.
+            in app.py we'll create an FAST API post request where we pass all the variables for the prediction.
+
+step 6:
+    deployement:
+        for deployement, need to create a main.yaml file within the "github/workflow" path. here , we'll delete the existing ".gitkeep" file and create yaml file.
+        in yaml file, write all the github action to aws deployement steps should be mentioned.
+        "this yaml file steps we can get from the github to aws website.
+        url: "https://github.com/sujeetkumae132/End-To-end-Machine-Learning-Project/actions/new"
+
+
+step: 7
+
+    ## MLflow
+
+        [Documentation](https://mlflow.org/docs/latest/index.html)
+
+        ##### cmd
+        - mlflow ui
+
+        ### dagshub
+        [dagshub](https://dagshub.com/)
+
+        MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow.mlflow \
+        MLFLOW_TRACKING_USERNAME=entbappy \
+        MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0 \
+        python script.py
+
+        Run this to export as env variables:
+
+        ```bash
+
+        export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow.mlflow
+
+        export MLFLOW_TRACKING_USERNAME=entbappy 
+
+        export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
+
+        ```
+
+step: 8
+
+    # AWS-CICD-Deployment-with-Github-Actions
+
+    ## 1. Login to AWS console.
+
+    ## 2. Create IAM user for deployment
+
+        #with specific access
+
+        1. EC2 access : It is virtual machine
+
+        2. ECR: Elastic Container registry to save your docker image in aws
+
+
+        #Description: About the deployment
+
+        1. Build docker image of the source code
+
+        2. Push your docker image to ECR
+
+        3. Launch Your EC2 
+
+        4. Pull Your image from ECR in EC2
+
+        5. Lauch your docker image in EC2
+
+        #Policy:
+
+        1. AmazonEC2ContainerRegistryFullAccess
+
+        2. AmazonEC2FullAccess
+
+        
+    ## 3. Create ECR repo to store/save docker image
+        - Save the URI: 010438509078.dkr.ecr.us-east-1.amazonaws.com/mlprojects
+
+        
+    ## 4. Create EC2 machine (Ubuntu) 
+
+    ## 5. Open EC2 and Install docker in EC2 Machine:
+        
+        
+        # setup for amazon linux based machine 
+
+        a. update the package repository
+
+            [sudo apt-get update -y] for debian 
+                or
+            [sudo yum update -y] for linux and other
+
+        
+        #required
+
+        b. Install Docker
+            
+             sudo yum install docker -y
+
+        c. Start the Docker service
+
+            sudo service docker start
+
+        d. Enable Docker to start on boot
+
+            sudo systemctl enable docker
+
+        e. Add your user to the Docker group (optional)
+        
+            sudo usermod -aG docker ec2-user
+
+
+        f. verify Docker installation
+
+            docker --version
+
+        
+    # 6. Configure EC2 as self-hosted runner:
+        setting>actions>runner>new self hosted runner> choose os> then run command one by one
+
+
+    # 7. Setup github secrets:
+
+        AWS_ACCESS_KEY_ID=
+
+        AWS_SECRET_ACCESS_KEY=
+
+        AWS_REGION = us-east-1
+
+        AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+
+        ECR_REPOSITORY_NAME = simple-app
+
+
+
+
+    ## About MLflow 
+    MLflow
+
+    - Its Production Grade
+    - Trace all of your expriements
+    - Logging & tagging your model
+
+
+
+
 

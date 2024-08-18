@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/AIML%20Projects/ineuron-python/self_practical/End-To-end-Machine-Learning-Project/mlruns/0/156f3e133fe643c39af6096bf8db958e/artifacts
+end_time: 1723863512349
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 156f3e133fe643c39af6096bf8db958e
+run_name: judicious-moose-39
+run_uuid: 156f3e133fe643c39af6096bf8db958e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1723863505046
+status: 3
+tags: []
+user_id: kumar
